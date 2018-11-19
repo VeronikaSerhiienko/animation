@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+ body {
+  padding: 0;
+  margin: 0;
+} 
+
+.block1 {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items:  center;
+  height: 100vh;
+}
+
+
+.animation {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  position: relative;
+  animation: animation 2s cubic-bezier(0.1,0.7,1,1) infinite;
+}
+
+@keyframes animation {
+  0% {
+    transform:rotate(-45deg);
+  }
+  
+  50%{
+    transform:rotate(-135deg);
+   
+  } 
+  100%{
+    transform:rotate(-225deg);
+  } 
+}
+
+.smallsquare {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+
+.blue {
+  border: 5px solid black;
+  animation: blue 2s ease-in-out infinite;
+}
+
+@keyframes blue {
+  0% {
+    transform:translate(0)
+  }
+  50%{
+    transform:translate(0, 50px);
+    border-color: blue;
+  } 
+  100%{
+    transform:translate(0)
+  } 
+}
+
+.orange {
+  border: 5px solid black;
+  animation: orange 2s ease-in-out infinite;
+}
+
+@keyframes orange {
+  0% {
+    transform:translate(0)
+  }
+  50%{
+    transform:translate(0, -50px);
+    border-color: orange;
+  } 
+  100%{
+    transform:translate(0)
+  } 
+}
+
+.purple {
+  border: 5px solid black;
+  animation: purple 2s ease-in-out infinite;
+}
+
+@keyframes purple {
+  0% {
+    transform:translate(0)
+  }
+  50%{
+    transform:translate(50px, 0);
+    border-color: purple;
+  } 
+  100%{
+    transform:translate(0)
+  } 
+}
+
+.pink {
+  border: 5px solid black;
+  animation: pink 2s ease-in-out infinite;
+}
+
+@keyframes pink {
+  0% {
+    transform:translate(0)
+  }
+  50%{
+    transform:translate(-50px, 0); border-color: pink;
+  } 
+  100%{
+    transform:translate(0)
+  } 
+}
+/*animation 2*/
+
+
+.box {
+  width: 50px;
+  height: 50px;
+  top: 33%; 
+  left: -50%;
+  transform: translate(-50px,-50px);
+  position: relative; 
+  
+}
+
+
+.smallcircle{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 5px 5px 3px grey;
+  animation: smallcircle 2s cubic-bezier(1,0,0,0.5) infinite;  
+  animation-delay: 0s;
+}
+
+.brown {
+  background-color: #bc8f8f;
+  animation-delay: 0s;  
+}
+
+@keyframes smallcircle {
+  0% {
+    transform:translate(0) ;
+    border-radius: 50%;
+  }
+  25%{
+    transform:translate(100px, 0) scale(0.5);
+    border-radius: 0;
+    }
+  50% {
+    transform:translate(100px, 100px);
+    border-radius: 50%;
+  }
+  75% {
+    transform:translate(0, 100px) scale(0.5);
+    border-radius: 0;
+  }
+  100%{
+    transform:translate(0);
+    border-radius: 50%;
+  } 
+}
+
+.silver {
+  background-color: #c0c0c0;
+  animation-delay: 0.5s;
+}
+
+.choco {
+  background-color: #d2691e;  
+  animation-delay: 1s;
+}
+
+.gold {
+  background-color: #ffd700;  
+  animation-delay: 1.5s;
+}
